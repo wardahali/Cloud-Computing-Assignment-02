@@ -3,16 +3,17 @@ apt update -y
 apt upgrade -y
 
 #Replace the variable value for different AZs like us-east-1a, us-east-1b ...
-AZ=us-east-1
+student=wardah-ali
 
 apt install nginx -y
 systemctl start nginx
 systemctl enable nginx
 
-wget https://www.free-css.com/assets/files/free-css-templates/download/page278/faster.zip
+wget https://www.free-css.com/assets/files/free-css-templates/download/page279/grad-school.zip
 apt install unzip -y
-unzip $PWD/faster.zip
+unzip $PWD/grad-school.zip
 rm /var/www/html/*
-mv $PWD/logistics-company-website-template/* /var/www/html
+mv $PWD/templatemo_557_grad_school/* /var/www/htmlsudo su
 
-sed -i "s/FASTER - Logistics Company Website Template/$AZ/g" /var/www/html/index.html
+
+sed -i "s/Grad School HTML5 Template/$student/g" /var/www/html/index.html
